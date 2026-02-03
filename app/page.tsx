@@ -1,5 +1,5 @@
-function Root() {
-	return <div>page</div>;
+function Home() {
+	return <div>Home</div>;
 }
 
-export default Root;
+export default Home;
