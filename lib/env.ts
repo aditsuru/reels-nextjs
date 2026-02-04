@@ -9,6 +9,10 @@ const envSchema = z.object({
 	DB_BUFFER_COMMANDS: z.coerce.boolean().default(false),
 	DB_MAX_POOL_SIZE: z.coerce.number().default(2),
 	DB_SERVER_TIMEOUT_MS: z.coerce.number().default(5000),
+
+	// Auth
+	NEXTAUTH_SECRET: z.string(),
+	TOKEN_MAX_AGE: z.coerce.number(),
 });
 
 const env = envSchema.safeParse(process.env);
